@@ -1,0 +1,98 @@
+<form action="">
+    <label>Digite seu nome</label>
+    <input type="text" placeholder="Digite aqui...">
+    <br><br>
+
+    <label>Email</label>
+    <input type="email">
+    <br><br>
+
+    <label>Senha</label>
+    <input id="senha" type="password" minlength="8">
+    <button onclick="mostrarSenha()" type="button">Olhinho</button>
+    <br><br>
+
+    <label>Idade</label>
+    <input  type="number" min="0" max="100">
+    <br><br>
+
+    <label>Saldo</label>
+    <input  type="number" step="0.01">
+    <br><br>
+
+    <!-- URL -->
+
+    <label>Data de Nascimento</label>
+    <input type="date">
+    <br><br>
+
+    <label>Hora de Nascimento</label>
+    <input type="time">
+    <br><br>
+
+    <label>Selecione uma cor</label>
+    <input type="color">
+    <br><br>
+
+    <label>Range</label>
+    <input type="range">
+    <br><br>
+
+    <label>Manda foto de agora</label>
+    <input type="file" accept=".pdf,.doc,.docx">
+    <br><br>
+
+    <input type="hidden" value="Teste">
+
+    <p>Selecione o tamanho da camiseta</p>
+    <label for="p">Pequeno</label> 
+    <input id="p" type="radio" name="tam" value="P"> <br>
+    
+    <label for="m">Medio</label> 
+    <input id="m" type="radio" name="tam" value="M"> <br>
+    
+    <label for="g">Grande</label> 
+    <input id="g" type="radio" name="tam" value="G"> <br>
+
+    <hr>
+    <p>Selecione suas bandas preferidas</p>
+    <input id="a" type="checkbox" value="Mastruz">
+    <label for="a">Mastruz com Leite</label>
+    <br>
+
+    <input id="b" type="checkbox" value="Dream">
+    <label for="b">Dream Theater</label>
+    <br>
+
+    <input id="z" type="checkbox" value="Zezo">
+    <label for="z">Zezo</label>
+    <br>
+
+    <input id="c" type="checkbox" value="pink">
+    <label for="c">Pink Floyd</label>
+    <br>
+
+    <label>Deixe sua mensagem</label>
+    <textarea placeholder="Digite..." maxlength="255"></textarea>
+
+    <button>Enviar</button>
+</form>
+
+<br><br><br><br><br>
+
+<script>
+    function mostrarSenha () {
+        let tipo = document.getElementById('senha')
+        .getAttribute('type');
+
+        if (tipo === 'text') {
+            document.getElementById('senha')
+                .setAttribute('type', 'password');
+        } else {
+            document.getElementById('senha')
+                .setAttribute('type', 'text');
+        }
+
+        
+    }
+</script>
