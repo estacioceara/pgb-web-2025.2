@@ -1,0 +1,31 @@
+<script>
+    let idade = prompt('qual a idade?');
+
+    // convertendo o texto em numero
+    idade = Number(idade);
+
+    if (idade < 13) {
+        alert("Criança");
+    } else if(idade < 18) {
+        alert("Adolescente");
+    } else if(idade < 60) {
+        alert("Adulto");
+    } else {
+        alert("Idoso");
+    }
+
+    // solução ruim (muitos ifs aninhados)
+    /*if (idade <= 12) {
+        alert("Criança");
+    } else {
+        if (idade < 18) {
+            alert("Adolescente");
+        } else {
+            if (idade < 60) {
+                alert("Adulto");
+            } else {
+                alert("Idoso");
+            }
+        }
+    }*/
+</script>
